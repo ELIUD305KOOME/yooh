@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Image Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: auto;
+    }
+    img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Fun Image Page!</h1>
+  <p>Click any image to learn more!</p>
+
+  <div class="image-grid">
+    <a href="http://127.0.0.1:9090" target="_blank">
+      <img src="https://picsum.photos/200?random=1" alt="Random Image 1">
+    </a>
+    <a href="http://127.0.0.1:9090" target="_blank">
+      <img src="https://picsum.photos/200?random=2" alt="Random Image 2">
+    </a>
+    <a href="http://127.0.0.1:9090" target="_blank">
+      <img src="https://picsum.photos/200?random=3" alt="Random Image 3">
+    </a>
+    <a href="http://127.0.0.1:9090" target="_blank">
+      <img src="https://picsum.photos/200?random=4" alt="Random Image 4">
+    </a>
+    <a href="http://127.0.0.1:9090" target="_blank">
+      <img src="https://picsum.photos/200?random=5" alt="Random Image 5">
+    </a>
+    <a href="http://127.0.0.1:9090" target="_blank">
+      <img src="https://picsum.photos/200?random=6" alt="Random Image 6">
+    </a>
+    <a href="http://127.0.0.1:9090" target="_blank">
+        <img src="https://picsum.photos/200?random=1" alt="Random Image 1">
+      </a>
+      <a href="http://127.0.0.1:9090" target="_blank">
+        <img src="https://picsum.photos/200?random=2" alt="Random Image 2">
+      </a>
+      <a href="http://127.0.0.1:9090" target="_blank">
+        <img src="https://picsum.photos/200?random=3" alt="Random Image 3">
+      </a>
+      <a href="http://127.0.0.1:9090" target="_blank">
+        <img src="https://picsum.photos/200?random=4" alt="Random Image 4">
+      </a>
+      <a href="http://127.0.0.1:9090" target="_blank">
+        <img src="https://picsum.photos/200?random=5" alt="Random Image 5">
+      </a>
+      <a href="http://127.0.0.1:9090" target="_blank">
+        <img src="https://picsum.photos/200?random=6" alt="Random Image 6">
+      </a>
+  </div>
+
+</body>
+</html>
