@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tayba Remote Cyber</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #007bff;
@@ -19,10 +24,39 @@
             font-size: 24px;
             font-weight: bold;
         }
-        .container {
-            width: 80%;
-            margin: auto;
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: #0056b3;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .sidebar {
+            width: 250px;
+            background: #003f7f;
+            color: white;
+            position: fixed;
+            height: 100%;
             padding: 20px;
+        }
+        .container {
+            margin-left: 260px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x600/?technology,office') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
         }
         .service {
             background: white;
@@ -31,8 +65,25 @@
             border-radius: 5px;
             box-shadow: 0px 0px 10px #ccc;
         }
+        .service img {
+            width: 100%;
+            border-radius: 5px;
+        }
         .service h2 {
             color: #007bff;
+        }
+        .contact {
+            text-align: center;
+            padding: 20px;
+        }
+        .contact a {
+            background: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
         }
         footer {
             background-color: #007bff;
@@ -41,76 +92,59 @@
             padding: 10px;
             margin-top: 20px;
         }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .container {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         Tayba Remote Cyber with Delivery
     </header>
+    <nav class="navbar">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <aside class="sidebar">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Basic Computer Services</li>
+            <li>Printing & Scanning</li>
+            <li>Government Assistance</li>
+            <li>Online Applications</li>
+            <li>Design Services</li>
+        </ul>
+    </aside>
     <div class="container">
-        <div class="service">
-            <h2>Basic Computer Services</h2>
-            <ul>
-                <li>Internet Browsing</li>
-                <li>Email Services</li>
-                <li>Document Creation (Word, Excel, PowerPoint)</li>
-            </ul>
+        <div class="hero">
+            Remote Cyber Services at Your Convenience
         </div>
-        <div class="service">
-            <h2>Printing and Scanning Services</h2>
-            <ul>
-                <li>Document Printing (A4, A3, etc.)</li>
-                <li>Photo Printing (Passport photos, high-quality images)</li>
-                <li>Document Scanning & Photocopying</li>
-            </ul>
+        <div id="services">
+            <div class="service">
+                <h2>Basic Computer Services</h2>
+                <img src="https://source.unsplash.com/600x400/?computer" alt="Computer Services">
+                <p>Internet browsing, email services, document creation.</p>
+            </div>
+            <div class="service">
+                <h2>Printing & Scanning</h2>
+                <img src="https://source.unsplash.com/600x400/?printer" alt="Printing Services">
+                <p>Document printing, photo printing, scanning & photocopying.</p>
+            </div>
+            <div class="service">
+                <h2>Government Services Assistance</h2>
+                <img src="https://source.unsplash.com/600x400/?government" alt="Government Services">
+                <p>eCitizen applications, KRA tax services, NSSF & NHIF assistance.</p>
+            </div>
         </div>
-        <div class="service">
-            <h2>Government Services Assistance</h2>
-            <ul>
-                <li>eCitizen registrations & applications</li>
-                <li>KRA (tax returns, PIN applications)</li>
-                <li>NSSF & NHIF services</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h2>Typing and Data Entry</h2>
-            <ul>
-                <li>Typing documents (letters, reports, applications)</li>
-                <li>CV writing and formatting</li>
-                <li>Data entry for businesses</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h2>Online Applications</h2>
-            <ul>
-                <li>Job applications</li>
-                <li>Passport & visa applications</li>
-                <li>University & loan applications</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h2>Design Services</h2>
-            <ul>
-                <li>Business cards, banners, posters</li>
-                <li>ID cards and certificates</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h2>Online Payments</h2>
-            <ul>
-                <li>M-Pesa transactions</li>
-                <li>Utility bill payments</li>
-                <li>Mobile wallet top-ups</li>
-            </ul>
-        </div>
-        <div class="service">
-            <h2>Other Services</h2>
-            <ul>
-                <li>Photo Editing</li>
-                <li>Social media account setup</li>
-                <li>Basic computer lessons</li>
-                <li>Secure printing kiosks</li>
-            </ul>
+        <div id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Reach us via WhatsApp:</p>
+            <a href="https://wa.me/0792182559" target="_blank">Chat on WhatsApp</a>
         </div>
     </div>
     <footer>
